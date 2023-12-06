@@ -2,8 +2,13 @@
 @import 'utilities/fonts';
 @import 'utilities/media-queries';
 @import 'utilities/mixins';
+@import 'utilities/measures';
 
-@import 'utilities/default.scss';
-@import 'utilities/reset';
+@import 'base/default';
+@import 'base/reset';
 
+@import 'blocks/buttons';
 @import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/clients';
+

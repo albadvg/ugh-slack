@@ -1,0 +1,11 @@
+@mixin mainPadding {
+    padding: 20px 20px;
+
+    @include tablet {
+        padding: 20px 40px;
+    }
+
+    @include desktop {
+        padding: 20px 9vw;
+    }
+}

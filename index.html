@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <header class="header">
+        <img src="./assets/logo.svg" alt="" class="header__logo">
+
+        <nav class="header-nav" id="header-nav">
+            <img src="./assets/logo.svg" alt="" class="header-nav__logo">
+            <img src="./assets/close.png" alt="" class="header-nav__close" id="close-icon">
+
+            <ul class="header-nav__list" >
+                    <li class=" header-nav__item"><a href="">Funciones</a></li>
+                    <li class=" header-nav__item"><a href="">Soluciones</a></li>
+                    <li class=" header-nav__item"><a href="">Empresa</a></li>
+                    <li class=" header-nav__item"><a href="">Recursos</a></li>
+                    <li class=" header-nav__item"><a href="">Precios</a></li>
+
+            </ul>
+                
+            <ul class="header-nav__list">
+                    <li class="header-nav__item"><a href="">Conectarse</a></li>
+                    <li class="header-nav__btn1"><a href="">HABLAR CON VENTAS</a></li>
+                    <li class="header-nav__btn2"><a href="">PROBARLO GRATIS</a></li>
+            </ul>
+
+        </nav>
+
+        <img src="./assets/burguer.png" alt="burguer nav button" class="header__burguer" id="burguer-icon">
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-info">
+                <h1 class="hero-info__title">Pensado para las personas. <span class="hero-info__title--orange">Creado para la productividad.</span></h1>
+                <p class="hero-info__txt">Conecta con las personas adecuadas, encuentra lo que necesitas y automatiza todo lo demás. Así es como se trabaja en Slack, tu plataforma de productividad.</p>
+                
+                
+                <a class="hero-info__btn1" href="">REGÍSTRATE CON CORREO</a>
+                <a class="hero-info__btn2" href=""><img src="./assets/google.png" alt="" class="hero-info__btn2-icon"><p class="hero-info__btn2-txt">REGISTRARSE CON GOOGLE</p></a>
+            
+            
+            </div>
+            <video autoplay muted loop class="hero__video">
+                <source src="https://a.slack-edge.com/ec3a92a/marketing/img/homepage/true-prospects/animations/mp4/ia4-hero-product-ui.es-ES.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section class="clients">
+            <h3 class="clients__title">EMPRESAS DE TODO EL MUNDO YA CONFÍAN EN SLACK</h3>
+        </section>
     
+    </main>
+    
+
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>

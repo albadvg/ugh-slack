@@ -1,0 +1,63 @@
+.hero {
+    background-color: $purple;
+    color: white;
+    text-align: center;
+    @include mainPadding;
+
+    @include tablet {
+        @include flex(initial, initial, row, 20px);
+        text-align: left;
+    }
+
+    &-info {
+        &__title {
+            font-size: 45px;
+            margin-bottom: 1rem;
+
+            &--orange {
+                color: $orange;
+            }
+        }
+
+        &__btn1 {
+            @include button(white, white, $purple);
+            margin: 10px 0;
+        }
+
+        &__btn2 {
+            @include button (#4285f4, #4285f4, white);
+            @include flex(initial, center);
+            margin: 10px 0;
+            padding-left: 0;
+
+            &-icon {
+                height: 37px;
+                border-radius: 2px;
+                margin-left: 5px;
+            }
+
+            &-txt {
+                flex-grow: 1;
+            }
+
+        }
+
+        
+    }
+
+    &__video {
+        width: 700px;
+        margin: 0 0 0 -70px;
+
+        @include tablet {
+            position: static;
+            margin: 0 -30vw 0 0;
+        }
+
+        @include large {
+            margin: 0 -10vw 0 0;
+        }
+    }
+
+
+}
