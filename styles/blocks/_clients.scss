@@ -1,0 +1,14 @@
+.clients {
+    background-color: $lightPurple;
+    padding: 40px;
+    
+    &__title {
+        font-size: .9rem;
+        text-align: center;
+    }
+
+    &-icons {
+        padding: 40px 0;
+        @include flex(center, center, row, 5vw, wrap)
+    }
+}

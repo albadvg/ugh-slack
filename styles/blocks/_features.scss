@@ -1,0 +1,105 @@
+.features {
+    @include mainPadding;
+    @include flex(initial, initial, column, 5rem);
+    background-color: $lightPurple;
+}
+
+.feature {
+
+    &--left {
+        @include flex(initial, flex-start, column, 2rem);
+    }
+
+    &--right {
+        @include flex(initial, flex-end, column, 2rem);
+        text-align: right;
+    }
+
+    @include tablet {
+        align-items: center;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    &-graphics {
+        position: relative;
+        height: 300px;
+        width: 100%;
+
+        @include desktop {
+            height: 25vw;
+            max-height: 350px;
+        }
+
+        &--left {
+            left: -20px;
+            @include tablet {
+                left: -40px;
+            }
+
+            @include desktop {
+                left: -7vw;
+            }
+
+            @include large {
+                left: 0;
+            }
+        }
+
+        &--right {
+            right: -20px;
+            @include tablet {
+                right: -40px;
+            }
+
+            @include desktop {
+                right: -7vw;
+                order: 1;
+            }
+
+            @include large {
+                left: 0;
+            }
+        }
+
+        &__img {           
+           height: 100%;
+            
+            @include tablet {
+                display: none
+            }
+        }
+
+        &__video {
+            height: 100%;
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
+
+            &--right {
+                float: right;
+            }
+        }
+    }
+    
+
+
+
+    &-info {
+        @include flex(initial, initial, column, 1rem);
+        max-width: 500px;
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__link {
+            color: $blueLink;
+        }
+    }
+}

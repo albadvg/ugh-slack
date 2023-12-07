@@ -1,0 +1,71 @@
+.opinions {
+    text-align: center;
+    @include mainPadding;
+
+    &-cta {
+        @include flex(initial, center, column, 1rem);
+
+        &__title {
+            font-size: 1.9rem;
+            max-width: 700px;
+            @include desktop {
+                font-size: 3rem;
+                
+            }
+        }
+
+        &__txt {
+            max-width: 700px;            
+        }
+
+        &-buttons {
+            @include flex (initial, initial, column, 1rem);
+            @include tablet {
+                @include flex (center, initial, row, 1rem);
+            }
+
+            &__btn1 {
+                @include button ($purple, $purple, white)
+            }
+    
+            &__btn2 {
+                @include button ($purple, transparent, $purple);
+            }
+        }
+
+        
+    }
+
+    &-survey {
+        padding: 3rem 0;
+        @include flex(space-evenly, center, column, 2rem);
+        @include tablet {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        &__opinion {
+            width: 270px;
+        }
+
+        &__number {
+            color: $purple;
+            font-size: 3.4rem;
+            font-weight: bold;
+        }
+
+        &__txt {
+            font-size: .9rem;
+            font-weight: 500;
+        }
+    }
+
+    &-case {
+        &__video {
+            clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
+            width: 100%;
+            margin: 2rem 0 2rem -40px;
+        }
+    }
+
+}
