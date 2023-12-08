@@ -1,8 +1,10 @@
 .opinions {
-    text-align: center;
-    @include mainPadding;
 
     &-cta {
+        text-align: center;
+
+        @include mainPadding;
+
         @include flex(initial, center, column, 1rem);
 
         &__title {
@@ -37,6 +39,10 @@
     }
 
     &-survey {
+        text-align: center;
+
+        @include mainPadding;
+
         padding: 3rem 0;
         @include flex(space-evenly, center, column, 2rem);
         @include tablet {
@@ -61,11 +67,62 @@
     }
 
     &-case {
+        @include desktop {
+            @include flex(space-between, center, row, 2rem);
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
+
         &__video {
             clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
             width: 100%;
             margin: 2rem 0 2rem -40px;
+            @include desktop {
+                width: 50%;
+            }
         }
+
+        &-txt {
+            padding: 0 1rem;
+            @include flex(space-between, initial, column, 1.5rem);
+            @include desktop {
+                width: 50%;
+            }
+
+            &__quote {
+                font-style: italic;
+                font-size: 1.2rem;
+            }
+
+            &-author {
+                &__name {
+                    font-weight: 600;
+                }
+
+                &__position {
+                    font-size: .9rem;
+                    font-weight: 500;
+                }
+            }
+
+            &__link {
+                color: $blueLink;
+                padding: 0 2rem 1rem 0;
+
+                &:hover {
+                    border-bottom: 2px solid $blueLink;
+                }
+            }
+        }
+    }
+
+    &__details {
+        text-align: center;
+        color: rgb(86, 86, 86);
+        @include mainPadding;
+        font-size: .8rem;
     }
 
 }

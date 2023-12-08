@@ -1,0 +1,29 @@
+.descubre {
+    background-color: $purple;
+    @include mainPadding;
+    @include flex(center, initial, column, 2rem);
+    clip-path: ellipse(105% 100% at center top);
+
+    &__title {
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+    }
+
+    &-buttons {
+
+        @include flex(initial, initial, column, 1rem);
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: center;
+        }
+        &__btn1 {
+            @include button(white, white, $purple);
+        }
+
+        &__btn2 {
+            @include button(white, transparent, white);
+        }
+    }
+}

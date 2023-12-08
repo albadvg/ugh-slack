@@ -1,0 +1,64 @@
+.explora {
+    background-color: $lightPurple;
+    @include mainPadding;
+
+    &__title {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &-cards {
+        @include grid(repeat(2, 1fr), initial, 1.5rem);
+        justify-content: center;
+
+        @include desktop {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.card{
+    @include flex(initial, space-between, column, 1rem);
+    max-width: 300px;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0,0,0,.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 2rem rgba(0,0,0,.1);
+
+    }
+
+    &--left {
+        justify-self: end;
+    }
+
+    &--right {
+        justify-self: start;
+    }
+
+    &__img {
+        width: 100%;
+    }
+    &__category {
+        color: rgb(56, 55, 55);
+        font-size: .8rem;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    &-link {
+        @include flex(space-between, center);
+        &__txt {
+            font-size: .9rem;
+            font-weight: 600;
+            color: $blueLink;
+        }
+    }
+}
