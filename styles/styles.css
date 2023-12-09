@@ -12,6 +12,22 @@
   font-display: swap;
   src: url("../../assets/fonts/InterVariable-Italic.woff2") format("woff2");
 }
+@keyframes headerOnScroll {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes headerBackToTop {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -162,11 +178,21 @@ li {
   width: 20px;
   cursor: pointer;
 }
-.header--fixed {
-  position: fixed;
+.header--backTop {
+  animation-name: headerBackToTop;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.header--pre-fixed {
   background-color: white;
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
   color: black;
+  position: fixed;
+  top: -100%;
+  transition: top 1s ease;
+}
+.header--fixed {
+  top: 0;
 }
 
 @media screen and (min-width: 748px) {
@@ -262,20 +288,20 @@ li {
   .header__burguer {
     display: none;
   }
-  .header--fixed {
+  .header--pre-fixed {
     border-radius: 40px;
     margin-top: 0.5rem;
     max-width: 1300px;
     padding: 20px 40px;
   }
-  .header--fixed .header-nav {
+  .header--pre-fixed .header-nav {
     background-color: white;
     color: black;
   }
-  .header--fixed .header-nav__list {
+  .header--pre-fixed .header-nav__list {
     color: black;
   }
-  .header--fixed .header-nav__btn1 {
+  .header--pre-fixed .header-nav__btn1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,10 +321,10 @@ li {
     color: #541554;
     position: relative;
   }
-  .header--fixed .header-nav__btn1:hover {
+  .header--pre-fixed .header-nav__btn1:hover {
     box-shadow: inset 0 0 0 1px #541554;
   }
-  .header--fixed .header-nav__btn2 {
+  .header--pre-fixed .header-nav__btn2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,7 +344,7 @@ li {
     color: white;
     position: relative;
   }
-  .header--fixed .header-nav__btn2:hover {
+  .header--pre-fixed .header-nav__btn2:hover {
     box-shadow: inset 0 0 0 1px white;
   }
 }

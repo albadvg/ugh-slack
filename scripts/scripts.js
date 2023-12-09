@@ -19,16 +19,23 @@ let headerLogo = document.querySelector('.header__logo');
 window.addEventListener('scroll', fixHeader);
 
 function fixHeader() {
+    if(window.scrollY > window.innerHeight - 100) {
+        header.classList.add('header--pre-fixed');
+    } else {
+        header.classList.remove('header--pre-fixed');
+
+    }
+
     if(window.scrollY > window.innerHeight) {
         header.classList.add('header--fixed');
         headerLogo.setAttribute('src', './assets/logo-b.svg');
         burguerIcon.setAttribute('src', './assets/burguer-b.png');
-        headerNav.classList.add('header-nav--fixed');
     } else {
         header.classList.remove('header--fixed');
+        // header.classList.add('header--backTop');
         headerLogo.setAttribute('src', './assets/logo-w.svg');
         burguerIcon.setAttribute('src', './assets/burguer.png');
-        headerNav.classList.remove('header-nav--fixed');
+        
     }
 }
 

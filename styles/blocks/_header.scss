@@ -75,13 +75,27 @@
         width: 20px;
         cursor: pointer;
     }
+    &--backTop {
+        animation-name: headerBackToTop;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+    }
 
-    //mobile styles on scroll
-    &--fixed {
-        position: fixed;
+
+    //mobile styles on 
+    &--pre-fixed {
         background-color: white;
         box-shadow: 0 4px 40px rgba(0,0,0,.08);
         color: black;
+        position: fixed;
+        top: -100%;
+        transition: top 1s ease;
+    }
+
+    &--fixed {   
+        top: 0;  
+        
+        
     }
 
     
@@ -144,7 +158,7 @@
         }
 
         //desktop styles on scroll
-        &--fixed {
+        &--pre-fixed {
             border-radius: 40px;
             margin-top: .5rem;
             max-width: 1300px;
