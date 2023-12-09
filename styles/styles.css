@@ -3,30 +3,14 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("../../assets/fonts/InterVariable.woff2") format("woff2");
+  src: url("../assets/fonts/InterVariable.woff2") format("woff2");
 }
 @font-face {
   font-family: InterVariable;
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url("../../assets/fonts/InterVariable-Italic.woff2") format("woff2");
-}
-@keyframes headerOnScroll {
-  from {
-    top: -100%;
-  }
-  to {
-    top: 0;
-  }
-}
-@keyframes headerBackToTop {
-  from {
-    top: 0;
-  }
-  to {
-    top: -100%;
-  }
+  src: url("../assets/fonts/InterVariable-Italic.woff2") format("woff2");
 }
 html {
   box-sizing: border-box;
@@ -120,7 +104,7 @@ li {
   width: 10px;
   transform: rotate(90deg);
   vertical-align: middle;
-  margin-left: 2px;
+  margin-left: 4px;
 }
 .header-nav__btn1 {
   display: flex;
@@ -232,6 +216,14 @@ li {
     gap: 20px;
     flex-wrap: nowrap;
     color: white;
+  }
+  .header-nav__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    flex-wrap: nowrap;
   }
   .header-nav__item:hover {
     text-decoration: underline;

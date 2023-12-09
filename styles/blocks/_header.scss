@@ -51,7 +51,7 @@
             width: 10px;
             transform: rotate(90deg);
             vertical-align: middle;
-            margin-left: 2px;
+            margin-left: 4px;
         }
 
         &__btn1 {
@@ -82,7 +82,7 @@
     }
 
 
-    //mobile styles on 
+    //mobile styles on scoll
     &--pre-fixed {
         background-color: white;
         box-shadow: 0 4px 40px rgba(0,0,0,.08);
@@ -133,11 +133,13 @@
             }
 
             &__item {
-                
+                @include flex(space-between, center);
                 &:hover {
                     text-decoration: underline;
                 }
             }
+
+            
 
             &__btn1 {
                 @include button (white, transparent, white);

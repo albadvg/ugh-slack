@@ -15,6 +15,7 @@ closeIcon.addEventListener('click', () => {
 //header behaviour on scroll
 let header = document.querySelector('.header');
 let headerLogo = document.querySelector('.header__logo');
+let headerArrows = document.querySelectorAll('.header-nav__arrow');
 
 window.addEventListener('scroll', fixHeader);
 
@@ -30,11 +31,13 @@ function fixHeader() {
         header.classList.add('header--fixed');
         headerLogo.setAttribute('src', './assets/logo-b.svg');
         burguerIcon.setAttribute('src', './assets/burguer-b.png');
+        headerArrows.forEach(arrow => arrow.setAttribute('src', './assets/chevron.png'));
     } else {
         header.classList.remove('header--fixed');
         // header.classList.add('header--backTop');
         headerLogo.setAttribute('src', './assets/logo-w.svg');
         burguerIcon.setAttribute('src', './assets/burguer.png');
+        headerArrows.forEach(arrow => arrow.setAttribute('src', './assets/chevron-w.png'));
         
     }
 }
