@@ -1,31 +1,40 @@
 .header {
-    @include flex(space-between, initial, row, 30px);
-    @include mainPadding;
+    @include flex(space-between, center, row, 30px);
     background-color: $purple;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
 
     &__logo {
-        width: 80px;
+        width: 100px;
     }
 
     &-nav {
 
-        padding: 15px;
+        padding: 14px;
+        position: absolute;
+        z-index: 99999;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        transition: right 1s ease;
 
         &__logo {
             width: 100px;
             margin-bottom: 30px;
         }
 
-        position: absolute;
-        top: 0;
-        right: -100%;
-        height: 100%;
-        width: 100%;
-        background-color: white;
-        transition: right 1s ease;
-
+       
         &--open {
             right: 0;
+            
         }
 
         &__list {
@@ -36,6 +45,13 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+
+        &__arrow {
+            width: 10px;
+            transform: rotate(90deg);
+            vertical-align: middle;
+            margin-left: 2px;
         }
 
         &__btn1 {
@@ -56,8 +72,16 @@
     }
 
     &__burguer {
-        width: 30px;
+        width: 20px;
         cursor: pointer;
+    }
+
+    //mobile styles on scroll
+    &--fixed {
+        position: fixed;
+        background-color: white;
+        box-shadow: 0 4px 40px rgba(0,0,0,.08);
+        color: black;
     }
 
     
@@ -65,10 +89,13 @@
 
 @include tablet {
     .header {
-
-        &__logo {
-            width: 100px;
-        }
+        height: 80px;
+        padding: 0 4vw;
+    }
+}
+@include desktop {
+    .header {
+        padding: 0 9vw;
 
         &-nav {
             position: static;
@@ -76,8 +103,12 @@
             flex-grow: 1;
             background-color: $purple;
             padding: 0;
+            height: auto;
+            width: auto;
             font-weight: bold;
             font-size: 14px;
+
+           
 
             &__logo {
                 display: none
@@ -112,6 +143,30 @@
             display: none;
         }
 
+        //desktop styles on scroll
+        &--fixed {
+            border-radius: 40px;
+            margin-top: .5rem;
+            max-width: 1300px;
+            padding: 20px 40px;
+
+            .header-nav {
+                background-color: white;
+                color: black;
+
+                &__list {
+                    color: black;
+                }
+
+                &__btn1 {
+                    @include button ($purple, transparent, $purple);
+                }
+        
+                &__btn2 {
+                    @include button ($purple, $purple, white);
+                }
+            }
+        }
         
     }
 }

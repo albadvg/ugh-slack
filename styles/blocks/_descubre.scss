@@ -1,13 +1,23 @@
 .descubre {
-    background-color: $purple;
-    @include mainPadding;
     @include flex(center, initial, column, 2rem);
+    background-color: $purple;
+    padding: 5rem 20px;
+    @include tablet {
+        padding: 5rem 4vw;
+    }
     clip-path: ellipse(105% 100% at center top);
+    @include desktop {
+        clip-path: ellipse(75% 100% at center top);
+        padding: 8rem 9vw;
+    }
 
     &__title {
         font-size: 2rem;
         color: white;
         text-align: center;
+        @include desktop {
+            font-size: 2.4rem;
+        }
     }
 
     &-buttons {

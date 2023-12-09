@@ -1,6 +1,6 @@
 .clients {
     background-color: $lightPurple;
-    padding: 40px;
+    @include mainPadding;
     
     &__title {
         font-size: .9rem;
@@ -8,7 +8,7 @@
     }
 
     &-icons {
-        padding: 40px 0;
+        padding-top: 2rem;
         @include flex(center, center, row, 5vw, wrap)
     }
 }

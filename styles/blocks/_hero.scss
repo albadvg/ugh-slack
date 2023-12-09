@@ -3,6 +3,8 @@
     color: white;
     text-align: center;
     @include mainPadding;
+    padding-top: 100px!important;
+    padding-bottom: 0;
 
     @include tablet {
         @include flex(initial, initial, row, 20px);
@@ -10,39 +12,55 @@
     }
 
     &-info {
+        @include flex(space-between, initial, column, .9rem);
         &__title {
             font-size: 45px;
-            margin-bottom: 1rem;
 
             &--orange {
                 color: $orange;
             }
         }
 
-        &__btn1 {
-            @include button(white, white, $purple);
-            margin: 10px 0;
+        &__txt {
+            max-width: 32rem;
+            font-weight: 600;
         }
 
-        &__btn2 {
-            @include button (#4285f4, #4285f4, white);
-            @include flex(initial, center);
-            margin: 10px 0;
-            padding-left: 0;
-
-            &-icon {
-                height: 37px;
-                border-radius: 2px;
-                margin-left: 5px;
+        &-buttons {
+            &__btn1 {
+                @include button(white, white, $purple);
+                margin: 10px 0;
             }
-
-            &-txt {
-                flex-grow: 1;
+    
+            &__btn2 {
+                @include button (#4285f4, #4285f4, white);
+                @include flex(initial, center);
+                margin: 10px 0;
+                padding-left: 0;
+    
+                &-icon {
+                    height: 37px;
+                    border-radius: 2px;
+                    margin-left: 5px;
+                }
+    
+                &-txt {
+                    flex-grow: 1;
+                }
+    
             }
-
         }
 
-        
+        &__conditions {
+            display: none;
+            
+            @include desktop {
+                display: inline-block;
+                font-weight: 700;
+                max-width: 32rem;
+            }
+        }
+      
     }
 
     &__video {

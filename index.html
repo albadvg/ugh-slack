@@ -8,19 +8,27 @@
 </head>
 <body>
     <header class="header">
-        <img src="./assets/logo.svg" alt="" class="header__logo">
+        <img src="./assets/logo-w.svg" alt="" class="header__logo">
 
         <nav class="header-nav" id="header-nav">
-            <img src="./assets/logo.svg" alt="" class="header-nav__logo">
+            <img src="./assets/logo-b.svg" alt="" class="header-nav__logo">
             <img src="./assets/close.png" alt="" class="header-nav__close" id="close-icon">
 
             <ul class="header-nav__list" >
-                    <li class=" header-nav__item"><a href="">Funciones</a></li>
-                    <li class=" header-nav__item"><a href="">Soluciones</a></li>
+                    <li class=" header-nav__item">
+                            <a href="">Funciones</a>
+                            <img src="./assets/chevron-w.png" alt="" class="header-nav__arrow">
+                    </li>
+                    <li class=" header-nav__item">
+                        <a href="">Soluciones</a>
+                        <img src="./assets/chevron-w.png" alt="" class="header-nav__arrow">
+                    </li>
                     <li class=" header-nav__item"><a href="">Empresa</a></li>
-                    <li class=" header-nav__item"><a href="">Recursos</a></li>
+                    <li class=" header-nav__item">
+                        <a href="">Recursos</a>
+                        <img src="./assets/chevron-w.png" alt="" class="header-nav__arrow">
+                    </li>
                     <li class=" header-nav__item"><a href="">Precios</a></li>
-
             </ul>
                 
             <ul class="header-nav__list">
@@ -41,11 +49,12 @@
                 <h1 class="hero-info__title">Pensado para las personas. <span class="hero-info__title--orange">Creado para la productividad.</span></h1>
                 <p class="hero-info__txt">Conecta con las personas adecuadas, encuentra lo que necesitas y automatiza todo lo demás. Así es como se trabaja en Slack, tu plataforma de productividad.</p>
                 
-                
-                <a class="hero-info__btn1" href="">REGÍSTRATE CON CORREO</a>
-                <a class="hero-info__btn2" href=""><img src="./assets/google.png" alt="" class="hero-info__btn2-icon"><p class="hero-info__btn2-txt">REGISTRARSE CON GOOGLE</p></a>
-            
-            
+                <div class="hero-info-buttons">
+                    <a class="hero-info-buttons__btn1" href="">REGÍSTRATE CON CORREO</a>
+                    <a class="hero-info-buttons__btn2" href=""><img src="./assets/google.png" alt="" class="hero-info-buttons__btn2-icon"><p class="hero-info-buttons__btn2-txt">REGISTRARSE CON GOOGLE</p></a>
+                </div>
+    
+                <p class="hero-info__conditions">Slack puede probarse de forma gratuita durante el tiempo que se quiera </p>
             </div>
             <video autoplay muted loop class="hero__video">
                 <source src="https://a.slack-edge.com/ec3a92a/marketing/img/homepage/true-prospects/animations/mp4/ia4-hero-product-ui.es-ES.mp4" type="video/mp4">
@@ -161,28 +170,28 @@
                 </a>
                 <a class="card card--right" href="">
                     <img src="./assets/card2.jpg" alt="" class="card__img">
-                    <p class="card__category">Funciones</p>
-                    <h4 class="card__title">Echa un vistazo a todo lo que puede hacer la plataforma</h4>
+                    <p class="card__category">Casos de clientes</p>
+                    <h4 class="card__title">Busca la inspiración en los clientes reales de Slack</h4>
                     <div class="card-link">
-                        <p class="card-link__txt">EXAMINA LAS FUNCIONES</p>
+                        <p class="card-link__txt">LEE LAS HISTORIAS</p>
                         <img src="./assets/arrow-right.png" alt="" class="card-link__arrow">
                     </div>
                 </a>
                 <a class="card card--left" href="">
                     <img src="./assets/card3.jpg" alt="" class="card__img">
-                    <p class="card__category">Funciones</p>
-                    <h4 class="card__title">Echa un vistazo a todo lo que puede hacer la plataforma</h4>
+                    <p class="card__category">Solucioens</p>
+                    <h4 class="card__title">Descubre todo lo que puede hacer Slack por tu equipo</h4>
                     <div class="card-link">
-                        <p class="card-link__txt">EXAMINA LAS FUNCIONES</p>
+                        <p class="card-link__txt">EXPLORA SOLUCIONES</p>
                         <img src="./assets/arrow-right.png" alt="" class="card-link__arrow">
                     </div>
                 </a>
                 <a class="card card--right" href="">
                     <img src="./assets/card4.jpg" alt="" class="card__img">
-                    <p class="card__category">Funciones</p>
-                    <h4 class="card__title">Echa un vistazo a todo lo que puede hacer la plataforma</h4>
+                    <p class="card__category">Cómo</p>
+                    <h4 class="card__title">Empieza con buen pie con la introducción a Slack</h4>
                     <div class="card-link">
-                        <p class="card-link__txt">EXAMINA LAS FUNCIONES</p>
+                        <p class="card-link__txt">DESCUBRE CÓMO HACERLO</p>
                         <img src="./assets/arrow-right.png" alt="" class="card-link__arrow">
                     </div>
                 </a>
@@ -256,6 +265,37 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="footer-submenu">
+            <div class="footer-submenu-settings">
+                <ul class="footer-submenu-settings-list">
+                    <li><a href="">Estado</a></li>
+                    <li><a href="">Privacidad</a></li>
+                    <li><a href="">Términos</a></li>
+                    <li><a href="">Sus opciones de privacidad</a></li>
+                    <li><a href="">Preferencias de cookies</a></li>
+                    <li><a href="">Contáctanos</a></li>
+                </ul>
+                
+                <a href="" class="footer-submenu-settings__region"><img src="./assets/world.png" alt="" class="footer-submenu-settings__icon">Cambiar de región <img src="./assets/chevron-down.png" alt="" class="footer-submenu-settings__icon"></a>
+            </div>
+
+            <div class="footer-submenu-social">
+                <a href="" class="footer-submenu-social__download"><img src="./assets/cloud.png" alt="" class="footer-submenu-social__cloud">Descargar Slack</a>
+                <ul class="footer-submenu-social-list">
+                    <li><img src="./assets/twitter.png" alt="" class="footer-submenu-social__icon"></li>
+                    <li><img src="./assets/fb.png" alt="" class="footer-submenu-social__icon"></li>
+                    <li><img src="./assets/yt.png" alt="" class="footer-submenu-social__icon"></li>
+                    <li><img src="./assets/linkedin.png" alt="" class="footer-submenu-social__icon"></li>
+                </ul>
+                
+                
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <p class="footer-copy__txt">©2023 Slack Technologies, LLC, una empresa de Salesforce. Todos los derechos reservados. Las distintas marcas comerciales pertenecen a sus respectivos propietarios</p>
         </div>
     </footer>
     

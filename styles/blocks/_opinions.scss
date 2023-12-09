@@ -5,11 +5,15 @@
 
         @include mainPadding;
 
-        @include flex(initial, center, column, 1rem);
+        @include flex(initial, initial, column, 1rem);
+        @include tablet {
+            align-items: center;
+        }
 
         &__title {
             font-size: 1.9rem;
             max-width: 700px;
+            padding-top: 3rem;
             @include desktop {
                 font-size: 3rem;
                 
@@ -94,6 +98,9 @@
             &__quote {
                 font-style: italic;
                 font-size: 1.2rem;
+                @include tablet {
+                    font-size: 1.4rem;
+                }
             }
 
             &-author {
@@ -109,11 +116,37 @@
 
             &__link {
                 color: $blueLink;
-                padding: 0 2rem 1rem 0;
+                position: relative;
+                width: 245px;
 
-                &:hover {
+                &::before {
+                    content: '';
+                    width: 0;
+                    position: absolute;
+                    bottom: -2px;
                     border-bottom: 2px solid $blueLink;
+                    transition: width .5s ease-in-out;
+
+                    
                 }
+
+                &:hover::before {
+                    width: 100%;
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 30px;
+                    height: 20px;
+                    background-image: url('../../assets/arrow-right.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                    margin-left: 1rem;
+                }
+
+                
             }
         }
     }

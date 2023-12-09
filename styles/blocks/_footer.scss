@@ -1,5 +1,6 @@
 .footer {
     @include mainPadding;
+
     &-menu {
 
         padding-bottom: 3rem;
@@ -15,9 +16,7 @@
             width: 50px;
             padding: 2rem 0;
 
-            @include desktop {
-                width: 80px;
-            }
+            
         }
 
         &-nav {
@@ -74,5 +73,91 @@
         }
     }
 
+    &-submenu {
+        padding-top: 2rem;
+        font-size: .9rem;
+        font-weight: 600;
+        @include flex(space-between, initial, column, 2rem);
+
+        @include large {
+            flex-direction: row;
+            font-size: .8rem;
+        }
+
+
+        &-settings {
+            @include flex(initial, initial, column, 1.5rem);
+            @include large {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            &-list {
+                @include flex(initial, initial, column, 1rem);
+
+                @include desktop {
+                    flex-direction: row;
+                    margin-bottom: 3rem;
+                }
+
+            }
+
+            &__icon {
+                width: 15px;
+
+                
+            }
+
+            &__region {
+                @include flex(initial, center, row, 5px);
+            }
+        }
+
+
+        &-social {
+            @include large {
+                @include flex(initial, flex-start, row, 1rem);
+            }
+            &__download {
+                @include flex(initial, center, row, 5px);
+                color: $blueLink;
+                font-size: .9rem;
+            }
+
+            &__cloud {
+                width: 20px;
+            }
+            &__icon {
+                width: 20px;
+                @include desktop {
+                    width: 15px;
+                }
+            }
+
+            &-list {
+                @include flex(space-between);
+                padding: 2rem 0;
+
+                @include large {
+                    padding: 0;
+                }
+
+                @include desktop {
+                    justify-content: flex-start;
+                    gap: 1rem;
+                }
+            }
+
+
+        }
+    }
+
+    &-copy {
+
+        &__txt {
+            font-size: .7rem;
+            color: gray;
+        }
+    }
 
 }

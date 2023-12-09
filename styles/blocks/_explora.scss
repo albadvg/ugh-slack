@@ -22,7 +22,7 @@
     @include flex(initial, space-between, column, 1rem);
     max-width: 300px;
     background-color: white;
-    padding: 1rem;
+    padding: .8rem;
     box-shadow: 0 0 2rem rgba(0,0,0,.1);
     transition: transform .3s ease, box-shadow .3s ease;
 

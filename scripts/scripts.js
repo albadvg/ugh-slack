@@ -12,6 +12,27 @@ closeIcon.addEventListener('click', () => {
     headerNav.classList.remove('header-nav--open');
 })
 
+//header behaviour on scroll
+let header = document.querySelector('.header');
+let headerLogo = document.querySelector('.header__logo');
+
+window.addEventListener('scroll', fixHeader);
+
+function fixHeader() {
+    if(window.scrollY > window.innerHeight) {
+        header.classList.add('header--fixed');
+        headerLogo.setAttribute('src', './assets/logo-b.svg');
+        burguerIcon.setAttribute('src', './assets/burguer-b.png');
+        headerNav.classList.add('header-nav--fixed');
+    } else {
+        header.classList.remove('header--fixed');
+        headerLogo.setAttribute('src', './assets/logo-w.svg');
+        burguerIcon.setAttribute('src', './assets/burguer.png');
+        headerNav.classList.remove('header-nav--fixed');
+    }
+}
+
+
 //footer menu behaviou (on mobile)
 
 let footerTitles = document.querySelectorAll('.footer-menu-list__title');
@@ -25,6 +46,3 @@ function open (e) {
     list.classList.toggle('footer-menu-list-secondary--open');
 }   
 
-// const element = document.getElementById('foo');
-// const styles = window.getComputedStyle(element, '::after');
-// const content = styles.content;
