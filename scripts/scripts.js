@@ -34,7 +34,6 @@ function fixHeader() {
         headerArrows.forEach(arrow => arrow.setAttribute('src', './assets/chevron.png'));
     } else {
         header.classList.remove('header--fixed');
-        // header.classList.add('header--backTop');
         headerLogo.setAttribute('src', './assets/logo-w.svg');
         burguerIcon.setAttribute('src', './assets/burguer.png');
         headerArrows.forEach(arrow => arrow.setAttribute('src', './assets/chevron-w.png'));

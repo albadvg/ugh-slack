@@ -45,15 +45,15 @@
             }
         }
 
-        &__item {     
+        &__item {   
+            @include flex(space-between, center);
             &:hover {
                 text-decoration: underline;
             }
         }
 
         &__arrow {
-            width: 10px;
-            transform: rotate(90deg);
+            width: 14px;
             vertical-align: middle;
             margin-left: 4px;
         }
@@ -121,7 +121,7 @@
 
 @include desktop {
     .header {
-        padding: 0 9vw;
+        
 
         &-nav {
             position: static;
@@ -142,15 +142,24 @@
             &__list {
                 @include flex (space-between, center, row, 20px);
                 color: white;
+
+                &--bottom {
+                    flex-grow: 0;
+                }
             }
 
             &__item {
                 @include flex(space-between, center);
+                width: unset;
                 &:hover {
                     text-decoration: underline;
                 }
             }
 
+            &__arrow {
+                width: 10px;
+                transform: rotate(90deg);
+            }
             
             &-buttons {
                 &__btn1 {
@@ -202,5 +211,15 @@
             }
         }
         
+    }
+}
+
+@include large {
+    .header {
+        padding: 0 9vw;
+
+        &--pre-fixed {
+            padding: 20px 30px;
+        }
     }
 }
