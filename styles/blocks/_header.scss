@@ -15,8 +15,8 @@
     }
 
     &-nav {
-
-        padding: 14px;
+        @include flex (initial, initial, column, 2rem);
+        padding: 20px;
         position: absolute;
         z-index: 99999;
         top: 0;
@@ -24,11 +24,11 @@
         width: 100%;
         height: 100vh;
         background-color: white;
+        font-weight: 700;
         transition: right 1s ease;
 
         &__logo {
             width: 100px;
-            margin-bottom: 30px;
         }
 
        
@@ -38,7 +38,11 @@
         }
 
         &__list {
-            @include flex (space-between, flex-start, column, 20px);
+            @include flex (space-between, flex-start, column, 2rem);
+
+            &--bottom {
+                flex-grow: 1;
+            }
         }
 
         &__item {     
@@ -53,14 +57,23 @@
             vertical-align: middle;
             margin-left: 4px;
         }
-
-        &__btn1 {
-            @include button ($purple, transparent, $purple);
+        
+        &-buttons {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            &__btn1 {
+                @include button ($purple, transparent, $purple);
+               flex-grow: 1;
+            }
+    
+            &__btn2 {
+                @include button ($purple, $purple, white);
+                flex-grow: 1;
+            }
         }
 
-        &__btn2 {
-            @include button ($purple, $purple, white);
-        }
+        
 
         &__close {
             width: 25px;
@@ -75,11 +88,7 @@
         width: 20px;
         cursor: pointer;
     }
-    &--backTop {
-        animation-name: headerBackToTop;
-        animation-duration: .5s;
-        animation-iteration-count: 1;
-    }
+
 
 
     //mobile styles on scoll
@@ -101,12 +110,15 @@
     
 }
 
+
 @include tablet {
     .header {
         height: 80px;
         padding: 0 4vw;
     }
 }
+
+
 @include desktop {
     .header {
         padding: 0 9vw;
@@ -140,14 +152,16 @@
             }
 
             
-
-            &__btn1 {
-                @include button (white, transparent, white);
+            &-buttons {
+                &__btn1 {
+                    @include button (white, transparent, white);
+                }
+        
+                &__btn2 {
+                    @include button (white, white, $purple);
+                }
             }
-    
-            &__btn2 {
-                @include button (white, white, $purple);
-            }
+            
             
 
             &__close {
@@ -174,13 +188,17 @@
                     color: black;
                 }
 
-                &__btn1 {
-                    @include button ($purple, transparent, $purple);
+                &-buttons {
+                    &__btn1 {
+                        @include button ($purple, transparent, $purple);
+                    }
+            
+                    &__btn2 {
+                        @include button ($purple, $purple, white);
+                    }
                 }
-        
-                &__btn2 {
-                    @include button ($purple, $purple, white);
-                }
+
+                
             }
         }
         
